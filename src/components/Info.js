@@ -54,7 +54,7 @@ export default function Info () {
                 <button 
                     className="form--submit"
                 >
-                    Sign up
+                    Enter Personal Info
                 </button>
             </form>
         </div>
