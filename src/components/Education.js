@@ -57,6 +57,10 @@ export default function Education () {
                     Enter Education
                 </button>
             </form>
+
+            <h3>School: {education.school}</h3>
+            <h3>Major: {education.major}</h3>
+            <h3>Class of {education.class}</h3>
         </div>
 
 
