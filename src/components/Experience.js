@@ -74,6 +74,13 @@ export default function Experience () {
                     Enter Experience
                 </button>
             </form>
+            <div className='formRender'>
+                <h3>Company: {experience.company}</h3>
+                <h3>Title: {experience.title}</h3>
+                <h3>Tasks: {experience.tasks}</h3>
+                <h3>Start date: {experience.startDate}</h3>
+                <h3>End date: {experience.endDate}</h3>
+            </div>
         </div>
 
 
