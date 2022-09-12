@@ -57,8 +57,15 @@ export default function Info () {
                     Enter Personal Info
                 </button>
             </form>
+
+            <h3>Name: {info.name}</h3>
+            <h3>E-mail: {info.email}</h3>
+            <h3>Phone: {info.phone}</h3>
+
+
         </div>
 
+        
 
     )
     
