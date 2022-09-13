@@ -5,11 +5,15 @@ export default function CurriculumVitae (props) {
         <div className="content">
             <div className="document">
                 <div className="personalInfo">
-                    <h2>Personal Information</h2>
                     <div className='formRender'>
-                        <h3>Name: {props.name}</h3>
-                        <h3>E-mail: {props.email}</h3>
+                        <div className="info-title">
+                            <h2>{props.name}</h2>
+                            <h3>{props.profession}</h3>
+                        </div>
                         <h3>Phone: {props.phone}</h3>
+                        <h3>Address: {props.address}</h3>
+                        <h3>E-mail: {props.email}</h3>
+                        
                         
                     </div>
                 </div>

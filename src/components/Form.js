@@ -4,8 +4,10 @@ import CurriculumVitae from "./CurriculumVitae";
 export default function Form () {
     const [info, setInfo] = React.useState({
         name: "",
+        profession: "",
         email: "",
         phone: "",
+        address: "",
     })
     const [education, setEducation] = React.useState({
         school: "",
@@ -66,7 +68,28 @@ export default function Form () {
                     onChange={handleChange}
                     name="name"
                 />
+
+                <input 
+                    type="text" 
+                    placeholder="Profession"
+                    onChange={handleChange}
+                    name="profession"
+                />      
                 
+                <input 
+                    type="number" 
+                    placeholder="Phone number"
+                    onChange={handleChange}
+                    name="phone"
+                />
+
+                <input 
+                    type="text" 
+                    placeholder="Address"
+                    onChange={handleChange}
+                    name="address"
+                />
+
                 <input 
                     type="email" 
                     placeholder="Email address"
@@ -75,12 +98,7 @@ export default function Form () {
                     name="email"
                 />
 
-                <input 
-                    type="number" 
-                    placeholder="Phone number"
-                    onChange={handleChange}
-                    name="phone"
-                />
+                
             </form>
             
             <form className="form" onSubmit={handleSubmit}>
@@ -153,8 +171,10 @@ export default function Form () {
         </div>
         <CurriculumVitae 
             name={info.name}
+            profession={info.profession}
             email={info.email}
             phone={info.phone}
+            address={info.address}
             school={education.school}
             major={education.major}
             classOf={education.classOf}
