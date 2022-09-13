@@ -1,4 +1,5 @@
 import React from "react";
+import CurriculumVitae from "./CurriculumVitae";
 
 export default function Form () {
     const [info, setInfo] = React.useState({
@@ -41,6 +42,7 @@ export default function Form () {
 
     }
     return(
+        <div className="main">
         <div className="form-container">
             <form className="form" onSubmit={handleSubmit}>
                 
@@ -72,11 +74,7 @@ export default function Form () {
                     Enter Personal Info
                 </button>
             </form>
-            <div className='formRender'>
-                <h3>Name: {info.name}</h3>
-                <h3>E-mail: {info.email}</h3>
-                <h3>Phone: {info.phone}</h3>
-            </div>
+            
             <form className="form" onSubmit={handleSubmit}>
                 
                 <input 
@@ -107,11 +105,7 @@ export default function Form () {
                     Enter Education
                 </button>
             </form>
-            <div className='formRender'>
-                <h3>School: {education.school}</h3>
-                <h3>Major: {education.major}</h3>
-                <h3>Class of {education.class}</h3>
-            </div>
+            
             <form className="form" onSubmit={handleSubmit}>
                 
                 <input 
@@ -157,14 +151,9 @@ export default function Form () {
                     Enter Experience
                 </button>
             </form>
-            <div className='formRender'>
-                <h3>Company: {experience.company}</h3>
-                <h3>Title: {experience.title}</h3>
-                <h3>Tasks: {experience.tasks}</h3>
-                <h3>Start date: {experience.startDate}</h3>
-                <h3>End date: {experience.endDate}</h3>
-            </div>
+            
         </div>
-
+        <CurriculumVitae />
+        </div>
     )
 }
