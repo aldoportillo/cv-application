@@ -5,3 +5,29 @@
     grid-template-columns: 1fr 4fr;
 
 }
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content{
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.personalInfo > .formRender{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+.personalInfo > .formRender > .info-title {
+    font-size: 3rem;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.personalInfo > .formRender > .info-title > h3{
+    font-size: 1.5rem;
+}
