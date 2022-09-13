@@ -10,7 +10,7 @@ export default function Form () {
     const [education, setEducation] = React.useState({
         school: "",
         major: "",
-        class: "",
+        classOf: "",
     })
     const [experience, setExperience] = React.useState({
         company: "",
@@ -21,11 +21,25 @@ export default function Form () {
     })
 
     console.log(info)
+    console.log(education)
+    console.log(experience)
     function handleChange (event) {
         
         const {name, value} = event.target
 
         setInfo(prevInfo => {
+            return{
+                ...prevInfo,
+                [name]: value,
+            }
+        })
+        setEducation(prevInfo => {
+            return{
+                ...prevInfo,
+                [name]: value,
+            }
+        })
+        setExperience(prevInfo => {
             return{
                 ...prevInfo,
                 [name]: value,
@@ -67,12 +81,6 @@ export default function Form () {
                     onChange={handleChange}
                     name="phone"
                 />
-
-                <button 
-                    className="form--submit"
-                >
-                    Enter Personal Info
-                </button>
             </form>
             
             <form className="form" onSubmit={handleSubmit}>
@@ -96,14 +104,9 @@ export default function Form () {
                     type="number" 
                     placeholder="Class of"
                     onChange={handleChange}
-                    name="class"
+                    name="classOf"
                 />
 
-                <button 
-                    className="form--submit"
-                >
-                    Enter Education
-                </button>
             </form>
             
             <form className="form" onSubmit={handleSubmit}>
@@ -145,15 +148,22 @@ export default function Form () {
                     name="endDate"
                 />
 
-                <button 
-                    className="form--submit"
-                >
-                    Enter Experience
-                </button>
             </form>
             
         </div>
-        <CurriculumVitae />
+        <CurriculumVitae 
+            name={info.name}
+            email={info.email}
+            phone={info.phone}
+            school={education.school}
+            major={education.major}
+            classOf={education.classOf}
+            company={experience.company}
+            title={experience.title}
+            tasks={experience.tasks}
+            startDate={experience.startDate}
+            endDate={experience.endDate}
+        />
         </div>
     )
 }

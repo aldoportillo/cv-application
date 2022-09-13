@@ -18,7 +18,7 @@ export default function CurriculumVitae (props) {
                     <div className='formRender'>
                         <h3>School: {props.school}</h3>
                         <h3>Major: {props.major}</h3>
-                        <h3>Class of {props.class}</h3>
+                        <h3>Class of {props.classOf}</h3>
                     </div>
                 </div>
                 <div className="experience">
